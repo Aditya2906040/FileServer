@@ -58,7 +58,7 @@ namespace Menu
     {
         if (ch == 27 || toupper(ch) == 'N')
         {
-            cout << "Exiting bye...";
+            cout << "Exiting bye...\n";
             return true;
         }
         return false;
