@@ -31,7 +31,8 @@ Features Implemented
 
     -Graceful client disconnection (EXIT command)
 
-#Commands & Protocol
+## Commands & Protocol
+
 -Client → Server
 
     LIST\n
@@ -47,7 +48,7 @@ Features Implemented
 
     "EOF\n" marks end of file list
 
-#Technologies Used
+## Technologies Used
 
 | Area       | Tool / API             | Notes                         |
 | ---------- | ---------------------- | ----------------------------- |
