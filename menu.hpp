@@ -35,7 +35,7 @@ namespace Menu
     void welcome()
     {
         cout << "------------------------------------------\n";
-        cout << "Welcome to The Ctrl+Xfer FileServer\n";
+        cout << "Welcome to The SockIt FileServer\n";
         cout << "------------------------------------------\n";
     }
 
