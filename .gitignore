@@ -8,3 +8,4 @@ build/
 *.exe
 *.pyc
 __pycache__/
+autopush.sh
