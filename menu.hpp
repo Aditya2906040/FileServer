@@ -56,7 +56,7 @@ namespace Menu
 
     bool isesc(char ch)
     {
-        if (ch == 27)
+        if (ch == 27 || toupper(ch) == 'N')
         {
             cout << "Exiting bye...";
             return true;
