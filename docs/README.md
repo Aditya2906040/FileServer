@@ -85,7 +85,14 @@ Features Implemented
 
 ## User Experience
 
-![Image of menu](image.png)
+---
+
+Welcome to The SockIt FileServer
+
+1. List files
+2. Download files
+3. Upload files
+4. Exit
 
 If user selects 3:
 
