@@ -97,9 +97,9 @@ Files on server:
 #Checklist
 | Task | Status |
 | -------------------------------- | ------ |
-| Basic TCP setup (client/server) | ✅ |
-| Handle one client | ✅ |
-| Parse `LIST` command | ✅ |
-| Send list of files | ✅ |
-| Add `EXIT` support | ✅ |
-| Prevent crashes on invalid input | ✅ |
+| Basic TCP setup (client/server) | |
+| Handle one client | |
+| Parse `LIST` command | |
+| Send list of files | |
+| Add `EXIT` support | |
+| Prevent crashes on invalid input | |
