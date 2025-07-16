@@ -56,5 +56,50 @@ Features Implemented
 | CLI        | Standard input/output  | Text-based interface          |
 | OS Support | Windows / Linux        | Platform-specific socket init |
 
+#Folder Structure
+/sockit/
+├── server/
+│ ├── basicServer.cpp # Testing entry point with menu loop
+│ ├── menu.hpp # Menu, input handling (getch-style)
+│ ├── file_server.cpp # Core server with sockets (to be built)
+│ ├── server.hpp # Server socket setup and management
+│ ├── client_handler.hpp # Handles client request routing
+│ ├── file_ops.hpp # File I/O (upload/download handling)
+│ └── server_files/ # Files stored or served
+│
+├── client/
+│ └── file_client.cpp # Client for actual server (to be built)
+│
+├── shared/
+│ ├── utils.hpp # Shared utilities (e.g., progress bar)
+│ └── protocol.hpp # Text-based command protocol
+│
+├── logs/
+│ └── server_log.txt # Optional logging
+│
+└── docs/
+├── README.md # Project documentation
+└── phase1_spec.md # Detailed planning
+
 #User Experience
+
 ![Image of menu](image.png)
+
+If user selects 3:
+
+Sending command: LIST
+Files on server:
+
+- file1.txt
+- file2.jpg
+- image.pdf
+
+#Checklist
+| Task | Status |
+| -------------------------------- | ------ |
+| Basic TCP setup (client/server) | ✅ |
+| Handle one client | ✅ |
+| Parse `LIST` command | ✅ |
+| Send list of files | ✅ |
+| Add `EXIT` support | ✅ |
+| Prevent crashes on invalid input | ✅ |
