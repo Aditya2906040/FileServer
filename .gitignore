@@ -1,1 +1,10 @@
 *.exe
+*.o
+*.out
+*.log
+*.bin
+*.swp
+build/
+*.exe
+*.pyc
+__pycache__/
