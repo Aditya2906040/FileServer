@@ -8,7 +8,6 @@ char ch;
 
 int main()
 {
-
     Menu::welcome();
     Menu::displayChoiceMenu();
 
