@@ -46,7 +46,7 @@ namespace Menu
 
     bool typeCheck(char ch)
     {
-        if (ch != '1' && ch != '2' && ch != '3' && ch != '4')
+        if (ch != '1' && ch != '2' && ch != '3' && ch != '4' && ch != 27)
         {
             cout << "Choose correct input." << endl;
             return true;
@@ -57,7 +57,10 @@ namespace Menu
     bool isesc(char ch)
     {
         if (ch == 27)
+        {
+            cout << "Exiting bye...";
             return true;
+        }
         return false;
     }
 }
