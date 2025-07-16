@@ -56,8 +56,9 @@ Features Implemented
 | CLI        | Standard input/output  | Text-based interface          |
 | OS Support | Windows / Linux        | Platform-specific socket init |
 
-```
 ## 📁 Folder Structure
+
+```
 
 /sockit/
 ├── server/
