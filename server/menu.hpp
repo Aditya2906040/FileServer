@@ -48,15 +48,14 @@ namespace Menu
     {
         if (ch != '1' && ch != '2' && ch != '3' && ch != '4' && ch != 27)
         {
-            cout << "Choose correct input." << endl;
             return true;
         }
         return false;
     }
 
-    bool isesc(char ch)
+    bool isExit(char ch)
     {
-        if (ch == 27 || toupper(ch) == 'N')
+        if (ch == 27 || ch == '4')
         {
             cout << "Exiting bye...\n";
             return true;

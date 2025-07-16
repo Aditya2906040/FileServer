@@ -1,4 +1,5 @@
 #include "menu.hpp"
+#include "file_ops.hpp"
 #include <iostream>
 
 using namespace std;
@@ -11,19 +12,29 @@ int main()
     Menu::welcome();
     Menu::displayChoiceMenu();
 
-    while (!Menu::isesc(ch))
+    while (!Menu::isExit(ch))
     {
         ch = Menu::my_getch();
-        Menu::typeCheck(ch);
+        if (Menu::typeCheck(ch))
+        {
+            continue;
+        }
 
         // main logic here:
 
+        if (ch == '1')
+        {
+            FileOps::listContent();
+        }
+
         // main logic here:
 
-        cout << "Do you want to continue?(Y/N)\n";
-        cin >> ch;
-        // if (toupper(ch) == 'N')
-        //     break;
+        if (Menu::isExit(ch))
+            break;
+        cout << "\nDo you want to continue?(Y/N)\n";
+        ch = Menu::my_getch();
+        if (toupper(ch) == 'N')
+            break;
     }
 
     return 0;
