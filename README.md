@@ -2,10 +2,11 @@
 
 Sockit is a fileserver using custom created TCP sockets using C++
 
-#Overview
+## Overview
+
 SockIt is a terminal-based file sharing system built in C++. It allows file transfers over TCP sockets, supporting upload, download, and file listing. This project is developed in phases, starting with a single-client blocking model and later extending to multiclient support and GUI integration.
 
-#System Architecture
+## System Architecture
 
 [Terminal Client] ⇄ TCP Socket ⇄ [Terminal Server]
 
@@ -81,33 +82,7 @@ Features Implemented
 │ └── phase1_spec.md # Detailed planning
 ```
 
-<!--
-#Folder Structure
-/sockit/
-├── server/
-│ ├── basicServer.cpp # Testing entry point with menu loop
-│ ├── menu.hpp # Menu, input handling (getch-style)
-│ ├── file_server.cpp # Core server with sockets (to be built)
-│ ├── server.hpp # Server socket setup and management
-│ ├── client_handler.hpp # Handles client request routing
-│ ├── file_ops.hpp # File I/O (upload/download handling)
-│ └── server_files/ # Files stored or served
-│
-├── client/
-│ └── file_client.cpp # Client for actual server (to be built)
-│
-├── shared/
-│ ├── utils.hpp # Shared utilities (e.g., progress bar)
-│ └── protocol.hpp # Text-based command protocol
-│
-├── logs/
-│ └── server_log.txt # Optional logging
-│
-└── docs/
-├── README.md # Project documentation
-└── phase1_spec.md # Detailed planning -->
-
-#User Experience
+## User Experience
 
 ![Image of menu](image.png)
 
@@ -120,12 +95,13 @@ Files on server:
 - file2.jpg
 - image.pdf
 
-#Checklist
-| Task | Status |
+## Checklist
+
+| Task                             | Status |
 | -------------------------------- | ------ |
-| Basic TCP setup (client/server) | |
-| Handle one client | |
-| Parse `LIST` command | |
-| Send list of files | |
-| Add `EXIT` support | |
-| Prevent crashes on invalid input | |
+| Basic TCP setup (client/server)  |        |
+| Handle one client                |        |
+| Parse `LIST` command             |        |
+| Send list of files               |        |
+| Add `EXIT` support               |        |
+| Prevent crashes on invalid input |        |
