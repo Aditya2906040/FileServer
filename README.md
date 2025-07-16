@@ -56,6 +56,31 @@ Features Implemented
 | CLI        | Standard input/output  | Text-based interface          |
 | OS Support | Windows / Linux        | Platform-specific socket init |
 
+```
+## 📁 Folder Structure
+
+/sockit/
+├── server/
+│ ├── basicServer.cpp # Testing entry point with menu loop
+│ ├── menu.hpp # Menu, input handling (getch-style)
+│ ├── file_server.cpp # Core server with sockets (to be built)
+│ ├── server.hpp # Server socket setup and management
+│ ├── client_handler.hpp # Handles client request routing
+│ ├── file_ops.hpp # File I/O (upload/download handling)
+│ └── server_files/ # Files stored or served
+├── client/
+│ └── file_client.cpp # Client for actual server (to be built)
+├── shared/
+│ ├── utils.hpp # Shared utilities (e.g., progress bar)
+│ └── protocol.hpp # Text-based command protocol
+├── logs/
+│ └── server_log.txt # Optional logging
+├── docs/
+│ ├── README.md # Project documentation
+│ └── phase1_spec.md # Detailed planning
+```
+
+<!--
 #Folder Structure
 /sockit/
 ├── server/
@@ -79,7 +104,7 @@ Features Implemented
 │
 └── docs/
 ├── README.md # Project documentation
-└── phase1_spec.md # Detailed planning
+└── phase1_spec.md # Detailed planning -->
 
 #User Experience
 
