@@ -1,4 +1,5 @@
 #include "menu.hpp"
+#include "shared/utils.hpp"
 #include "file_ops.hpp"
 #include <iostream>
 
@@ -14,7 +15,7 @@ int main()
 
     while (!Menu::isExit(ch))
     {
-        ch = Menu::my_getch();
+        ch = Util::my_getch();
         if (Menu::typeCheck(ch))
         {
             continue;
@@ -32,7 +33,7 @@ int main()
         if (Menu::isExit(ch))
             break;
         cout << "\nDo you want to continue?(Y/N)\n";
-        ch = Menu::my_getch();
+        ch = Util::my_getch();
         if (toupper(ch) == 'N')
             break;
     }
