@@ -10,6 +10,19 @@ using namespace std;
 
 namespace Server
 {
+    int server_sock;
+    int client_sock;
+
+    int getSSock()
+    {
+        return server_sock;
+    }
+
+    int getCSock()
+    {
+        return client_sock;
+    }
+
     int createSocket()
     {
         int sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -47,32 +60,40 @@ namespace Server
     {
         sockaddr_in client_addr{};
         socklen_t client_len = sizeof(client_addr);
-        int client_sock = accept(sockfd, (sockaddr *)&client_addr, &client_len);
+        client_sock = accept(sockfd, (sockaddr *)&client_addr, &client_len);
         if (client_sock < 0)
             perror("Accept failed");
         return client_sock;
     }
 
-    void handleClient(int client_sock)
-    {
-        char buffer[1024] = {0};
-        ssize_t bytes_received = recv(client_sock, buffer, sizeof(buffer), 0);
-        if (bytes_received > 0)
-        {
-            cout << "Client says: " << string(buffer, bytes_received) << endl;
-        }
-        else
-        {
-            cerr << "Failed to receive data or connection closed.\n";
-        }
+    // void handleClient(int client_sock)
+    // {
+    //     char buffer[1024] = {0};
+    //     int i = 5;
+    //     while (i-- > 0)
+    //     {
+    //         ssize_t bytes_received = recv(client_sock, buffer, sizeof(buffer), 0);
+    //         if (bytes_received > 0)
+    //         {
+    //             cout << "Client says: " << string(buffer, bytes_received) << endl;
+    //         }
+    //         else
+    //         {
+    //             cerr << "Failed to receive data or connection closed.\n";
+    //         }
+    //         memset(buffer, '\0', sizeof(buffer));
 
-        const char *response = "Hello from server!";
-        send(client_sock, response, strlen(response), 0);
-    }
-
+    //         string resp;
+    //         cout << "Enter your message: ";
+    //         // cin >> resp;
+    //         getline(cin, resp);
+    //         // const char *response = "Hello from server!";
+    //         send(client_sock, resp.c_str(), resp.length(), 0);
+    //     }
+    // }
     bool start(uint16_t port)
     {
-        int server_sock = createSocket();
+        server_sock = createSocket();
         if (server_sock < 0)
             return false;
 
@@ -97,10 +118,10 @@ namespace Server
             return false;
         }
 
-        handleClient(client_sock);
+        // handleClient(client_sock);
 
-        close(client_sock);
-        close(server_sock);
+        // close(client_sock);
+        // close(server_sock);
         return true;
     }
 }

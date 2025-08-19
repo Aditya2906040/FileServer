@@ -38,12 +38,37 @@ int main()
         perror("Connection Failed");
         return 1;
     }
+    // int i = 5;
+    // while (i-- > 0)
+    // {
+    //     // const char *hello = "Hello from client!";
+    //     string msg;
+    //     // cin.getline(msg);
+    //     getline(cin, msg);
+    //     send(sock, msg.c_str(), msg.length(), 0);
+    //     read(sock, buffer, 1024);
+    //     cout << "Server replied: " << buffer << endl;
+    //     memset(buffer, '\0', strlen(buffer));
+    // }
 
-    const char *hello = "Hello from client!";
-    send(sock, hello, strlen(hello), 0);
+    // get the welcome message and the menu
+
     read(sock, buffer, 1024);
-    cout << "Server replied: " << buffer << endl;
+    cout << buffer << endl;
+    memset(buffer, '\0', sizeof(buffer));
 
+    read(sock, buffer, 1024);
+    cout << buffer << endl;
+    memset(buffer, '\0', sizeof(buffer));
+
+    string cmd;
+    cout << "Enter command: ";
+    // getline(cin, cmd);
+    cin >> cmd;
+    // cout << "Sending: " << cmd << endl;
+    send(sock, cmd.c_str(), cmd.length(), 0);
+
+    cout << "Exiting bye...";
     close(sock);
     return 0;
 }

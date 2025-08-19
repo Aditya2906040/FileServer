@@ -9,16 +9,24 @@ using namespace std;
 namespace Menu
 {
 
-    void welcome()
+    string welcome()
     {
-        cout << "------------------------------------------\n";
-        cout << "Welcome to The SockIt FileServer\n";
-        cout << "------------------------------------------\n";
+        // cout << "------------------------------------------\n";
+        // cout << "Welcome to The SockIt FileServer\n";
+        // cout << "------------------------------------------\n";
+        return "------------------------------------------\nWelcome to The SockIt FileServer\n------------------------------------------\n";
     }
 
-    void displayChoiceMenu()
+    string displayChoiceMenu()
     {
-        cout << "1. List files\n2. Download files\n3. Upload files\n4. Exit" << endl;
+        // cout << "1. List files\n2. Download files\n3. Upload files\n4. Exit" << endl;
+        // cout << "The commands and their formats are: ";
+        // cout << "\n   LIST\n";
+        // cout << "   DOWNLOAD <filename/directory_name>\n";
+        // cout << "   UPLOAD <filename/directory_name>\n";
+        // cout << "   EXIT\n";
+
+        return "The commands and their formats are: \n   LIST\n   DOWNLOAD <filename/directory_name>\n   UPLOAD <filename/directory_name>\n   EXIT\n";
     }
 
     bool typeCheck(char ch)

@@ -31,4 +31,10 @@ namespace Util
 
         return ch;
     }
+
+    string parseCommand(const string &cmd)
+    {
+
+        return "";
+    }
 }

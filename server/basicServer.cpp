@@ -1,11 +1,12 @@
 #include "menu.hpp"
-#include "shared/utils.hpp"
+#include "../shared/utils.hpp"
 #include "file_ops.hpp"
 #include <iostream>
 
 using namespace std;
 
 bool esc = false;
+bool isList = false;
 char ch;
 
 int main()
@@ -27,7 +28,6 @@ int main()
         {
             FileOps::listContent();
         }
-
         // main logic here:
 
         if (Menu::isExit(ch))
